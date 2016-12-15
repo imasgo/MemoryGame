@@ -14,6 +14,7 @@ namespace GameMemory
     {
         //Variables
         int score = 0;//score
+        MenuForm mf = new MenuForm();
         bool again = false;//Do you want to play again
         Random Location = new Random();//Chooses random places for each new card
         List<int> X = new List<int>();//list of x coordinates
@@ -375,6 +376,12 @@ namespace GameMemory
             PendingImage2.Image = Properties.Resources.MdzRlewvieo1;
             PendingImage1 = null;
             PendingImage2 = null;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mf.Show();
+            
         }
     }
 }
