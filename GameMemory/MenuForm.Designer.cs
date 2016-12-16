@@ -35,9 +35,10 @@
             // 
             // PlayButton
             // 
-            this.PlayButton.Location = new System.Drawing.Point(270, 97);
+            this.PlayButton.Location = new System.Drawing.Point(405, 149);
+            this.PlayButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(139, 60);
+            this.PlayButton.Size = new System.Drawing.Size(208, 92);
             this.PlayButton.TabIndex = 0;
             this.PlayButton.Text = "Play Game";
             this.PlayButton.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // BoardButton
             // 
-            this.BoardButton.Location = new System.Drawing.Point(270, 182);
+            this.BoardButton.Location = new System.Drawing.Point(405, 280);
+            this.BoardButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BoardButton.Name = "BoardButton";
-            this.BoardButton.Size = new System.Drawing.Size(139, 60);
+            this.BoardButton.Size = new System.Drawing.Size(208, 92);
             this.BoardButton.TabIndex = 1;
             this.BoardButton.Text = "Leaderboards";
             this.BoardButton.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(270, 262);
+            this.ExitButton.Location = new System.Drawing.Point(405, 403);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(139, 60);
+            this.ExitButton.Size = new System.Drawing.Size(208, 92);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -65,13 +68,14 @@
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(699, 414);
+            this.ClientSize = new System.Drawing.Size(1048, 637);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.BoardButton);
             this.Controls.Add(this.PlayButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuForm_FormClosing);

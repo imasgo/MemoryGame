@@ -38,12 +38,14 @@ namespace GameMemory
         {
             MenuLauncher.ExitG();
             this.Close();
+            //Application.Exit();
+           
            
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            Application.Exit();
         }
     }
 }
