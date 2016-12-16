@@ -380,8 +380,17 @@ namespace GameMemory
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            mf.Show();
             
+            this.Hide();
+            e.Cancel = true;
+            mf.Show();   
+        }
+
+        private void buttonback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+            mf.Show();
         }
     }
 }

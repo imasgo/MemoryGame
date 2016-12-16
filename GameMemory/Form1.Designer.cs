@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.buttonback = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6Dup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).BeginInit();
@@ -78,7 +79,7 @@
             this.panel1.Controls.Add(this.Pic1Dup);
             this.panel1.Controls.Add(this.Pic1);
             this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(609, 461);
             this.panel1.TabIndex = 0;
@@ -86,7 +87,7 @@
             // Pic6Dup
             // 
             this.Pic6Dup.Location = new System.Drawing.Point(460, 315);
-            this.Pic6Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic6Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic6Dup.Name = "Pic6Dup";
             this.Pic6Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic6Dup.TabIndex = 11;
@@ -97,7 +98,7 @@
             // Pic6
             // 
             this.Pic6.Location = new System.Drawing.Point(311, 315);
-            this.Pic6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic6.Margin = new System.Windows.Forms.Padding(2);
             this.Pic6.Name = "Pic6";
             this.Pic6.Size = new System.Drawing.Size(133, 130);
             this.Pic6.TabIndex = 10;
@@ -108,7 +109,7 @@
             // Pic5Dup
             // 
             this.Pic5Dup.Location = new System.Drawing.Point(162, 315);
-            this.Pic5Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic5Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic5Dup.Name = "Pic5Dup";
             this.Pic5Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic5Dup.TabIndex = 9;
@@ -119,7 +120,7 @@
             // Pic5
             // 
             this.Pic5.Location = new System.Drawing.Point(13, 315);
-            this.Pic5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic5.Margin = new System.Windows.Forms.Padding(2);
             this.Pic5.Name = "Pic5";
             this.Pic5.Size = new System.Drawing.Size(133, 130);
             this.Pic5.TabIndex = 8;
@@ -130,7 +131,7 @@
             // Pic4Dup
             // 
             this.Pic4Dup.Location = new System.Drawing.Point(460, 162);
-            this.Pic4Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic4Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic4Dup.Name = "Pic4Dup";
             this.Pic4Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic4Dup.TabIndex = 7;
@@ -141,7 +142,7 @@
             // Pic4
             // 
             this.Pic4.Location = new System.Drawing.Point(311, 162);
-            this.Pic4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic4.Margin = new System.Windows.Forms.Padding(2);
             this.Pic4.Name = "Pic4";
             this.Pic4.Size = new System.Drawing.Size(133, 130);
             this.Pic4.TabIndex = 6;
@@ -152,7 +153,7 @@
             // Pic3Dup
             // 
             this.Pic3Dup.Location = new System.Drawing.Point(162, 162);
-            this.Pic3Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic3Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic3Dup.Name = "Pic3Dup";
             this.Pic3Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic3Dup.TabIndex = 5;
@@ -163,7 +164,7 @@
             // Pic3
             // 
             this.Pic3.Location = new System.Drawing.Point(13, 162);
-            this.Pic3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic3.Margin = new System.Windows.Forms.Padding(2);
             this.Pic3.Name = "Pic3";
             this.Pic3.Size = new System.Drawing.Size(133, 130);
             this.Pic3.TabIndex = 4;
@@ -174,7 +175,7 @@
             // Pic2Dup
             // 
             this.Pic2Dup.Location = new System.Drawing.Point(459, 11);
-            this.Pic2Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic2Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic2Dup.Name = "Pic2Dup";
             this.Pic2Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic2Dup.TabIndex = 3;
@@ -185,7 +186,7 @@
             // Pic2
             // 
             this.Pic2.Location = new System.Drawing.Point(310, 11);
-            this.Pic2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic2.Margin = new System.Windows.Forms.Padding(2);
             this.Pic2.Name = "Pic2";
             this.Pic2.Size = new System.Drawing.Size(133, 130);
             this.Pic2.TabIndex = 2;
@@ -197,7 +198,7 @@
             // 
             this.Pic1Dup.Image = global::GameMemory.Properties.Resources.Card6;
             this.Pic1Dup.Location = new System.Drawing.Point(161, 11);
-            this.Pic1Dup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic1Dup.Margin = new System.Windows.Forms.Padding(2);
             this.Pic1Dup.Name = "Pic1Dup";
             this.Pic1Dup.Size = new System.Drawing.Size(133, 130);
             this.Pic1Dup.TabIndex = 1;
@@ -209,7 +210,7 @@
             // 
             this.Pic1.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
             this.Pic1.Location = new System.Drawing.Point(13, 11);
-            this.Pic1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pic1.Margin = new System.Windows.Forms.Padding(2);
             this.Pic1.Name = "Pic1";
             this.Pic1.Size = new System.Drawing.Size(133, 130);
             this.Pic1.TabIndex = 0;
@@ -263,16 +264,27 @@
             this.timer3.Interval = 300;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // buttonback
+            // 
+            this.buttonback.Location = new System.Drawing.Point(679, 356);
+            this.buttonback.Name = "buttonback";
+            this.buttonback.Size = new System.Drawing.Size(108, 45);
+            this.buttonback.TabIndex = 15;
+            this.buttonback.Text = "Back to black";
+            this.buttonback.UseVisualStyleBackColor = true;
+            this.buttonback.Click += new System.EventHandler(this.buttonback_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 467);
+            this.Controls.Add(this.buttonback);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ScoreCount);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -316,6 +328,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button buttonback;
     }
 }
 

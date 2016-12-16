@@ -10,20 +10,16 @@ using System.Windows.Forms;
 
 namespace GameMemory
 {
-    public partial class LeaderBoardsForm : Form
+    public partial class FormName : Form
     {
-        public LeaderBoardsForm()
+        public FormName()
         {
             InitializeComponent();
         }
 
-        MenuForm mf = new MenuForm();
-
-        private void LeaderBoardsForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            e.Cancel = true;
-            mf.Show();
+
         }
     }
 }

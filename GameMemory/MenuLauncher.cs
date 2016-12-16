@@ -4,13 +4,16 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameMemory
 {
     class MenuLauncher
     {
         static Form1 lform = new Form1();
+        
         static LeaderBoardsForm lform2= new LeaderBoardsForm();
+
         //static MenuForm lform2 = new MenuForm();  
 
         public static void StartGame()
@@ -19,13 +22,15 @@ namespace GameMemory
             //Process.Start("GameMemory.exe");
             lform.Show();
         }
+
         public static void LeaderBoard()
         {
+            lform2.Activate();
             lform2.Show();
         }
         public static void ExitG()
         {
-
+            //Application.Exit();
         }
     }
 }
