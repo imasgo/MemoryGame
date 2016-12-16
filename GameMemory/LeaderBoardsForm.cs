@@ -17,13 +17,22 @@ namespace GameMemory
             InitializeComponent();
         }
 
-        MenuForm mf = new MenuForm();
-
-        private void LeaderBoardsForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void LeaderBoardsForm_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            e.Cancel = true;
-            mf.Show();
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "leaderboardDataSet.LeaderboardClasses". При необходимости она может быть перемещена или удалена.
+            this.leaderboardClassesTableAdapter.Fill(this.leaderboardDataSet.LeaderboardClasses);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

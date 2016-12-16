@@ -23,7 +23,6 @@ namespace GameMemory
         {
             //скрывает менюшку
             this.Hide();
-
             MenuLauncher.StartGame();
             //придумать как потом показывать ее обратно(Form.FormCLosing?)
             //this.Show(); 
@@ -31,16 +30,17 @@ namespace GameMemory
 
         private void BoardButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             MenuLauncher.LeaderBoard();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            
-           this.Close();
-           //Application.Exit();
-           MenuLauncher.ExitG();
+            MenuLauncher.ExitG();
+            this.Close();
+            //Application.Exit();
+           
+           
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -15,9 +15,15 @@ namespace GameMemory
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
-            //Application.Run(new Form1());
+           Application.SetCompatibleTextRenderingDefault(false);
+          Application.Run(new MenuForm());
+          //  Application.Run(new Form1());
+
+
+            using (var c = new Context())
+            {
+                c.Leaders.ToList();
+            }
         }
     }
 }
