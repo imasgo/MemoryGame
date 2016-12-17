@@ -497,16 +497,23 @@ namespace GameMemory
                 TimeLimit.Stop();
                 if (timeleft == 0)
                 {
-                    MessageBox.Show("I am poppy");
+                    //MessageBox.Show("I am poppy");
                     this.Hide();
                     lform1.Show();
-                    //timercount = 0;
+                   
                 }
                 else
                 {
                     this.Hide();
                     lform.Show();
                     lform.Username_Load(sender,e);
+                    using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt",true))
+                    {
+                        int gametime = 30 - timeleft;
+                                file.Write(gametime.ToString()+",");
+                            
+                    }
 
                 }
                 
