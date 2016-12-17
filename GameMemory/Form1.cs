@@ -93,7 +93,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic1.Enabled = false;
+                    Pic1Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -119,7 +123,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic1.Enabled = false;
+                    Pic1Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -143,7 +151,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic2.Enabled = false;
+                    Pic2Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -167,7 +179,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic2.Enabled = false;
+                    Pic2Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text)+10);
                 }
                 else
                 {
@@ -191,7 +207,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic3.Enabled = false;
+                    Pic3Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -215,7 +235,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic3.Enabled = false;
+                    Pic3Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -239,7 +263,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic4.Enabled = false;
+                    Pic4Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -263,7 +291,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic4.Enabled = false;
+                    Pic4Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -287,7 +319,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic5.Enabled = false;
+                    Pic5Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -311,6 +347,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic5.Enabled = false;
+                    Pic5Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
 
                 }
                 else
@@ -335,7 +376,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic6.Enabled = false;
+                    Pic6Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -359,7 +404,11 @@ namespace GameMemory
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    Pic6.Enabled = false;
+                    Pic6Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                 }
                 else
                 {
@@ -376,6 +425,7 @@ namespace GameMemory
             PendingImage2.Image = Properties.Resources.MdzRlewvieo1;
             PendingImage1 = null;
             PendingImage2 = null;
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
