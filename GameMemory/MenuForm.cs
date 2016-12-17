@@ -17,26 +17,32 @@ namespace GameMemory
             InitializeComponent();
         }
 
-
+        static Form1 lform = new Form1();
+        static LeaderBoardsForm lform1 = new LeaderBoardsForm();
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
             //скрывает менюшку
             this.Hide();
-            MenuLauncher.StartGame();
+            lform.Show();
+            lform.Form1_Load(sender, e);
+            
+            //MenuLauncher.StartGame();
             //придумать как потом показывать ее обратно(Form.FormCLosing?)
             //this.Show(); 
         }
 
         private void BoardButton_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            //lform1.Show();
+            //lform1.LeaderBoardsForm_Load(sender,e);
             MenuLauncher.LeaderBoard();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            MenuLauncher.ExitG();
+            //MenuLauncher.ExitG();
             this.Close();
             //Application.Exit();
            

@@ -32,8 +32,9 @@ namespace GameMemory
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
+            label1.Text = "5";
             foreach (PictureBox pic in panel1.Controls)
             {
                 pic.Enabled = false;

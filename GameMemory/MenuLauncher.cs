@@ -20,7 +20,8 @@ namespace GameMemory
         {
             //для этого варика надо выносить меню в отдельные проект но можно и так
             //Process.Start("GameMemory.exe");
-            lform.Show();
+            //lform.Form1_Load(sender,e);
+            
         }
 
         public static void LeaderBoard()
