@@ -98,6 +98,7 @@ namespace GameMemory
                     Pic1.Enabled = false;
                     Pic1Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -128,6 +129,7 @@ namespace GameMemory
                     Pic1.Enabled = false;
                     Pic1Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -156,6 +158,7 @@ namespace GameMemory
                     Pic2.Enabled = false;
                     Pic2Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -184,6 +187,7 @@ namespace GameMemory
                     Pic2.Enabled = false;
                     Pic2Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text)+10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -212,6 +216,7 @@ namespace GameMemory
                     Pic3.Enabled = false;
                     Pic3Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -240,6 +245,7 @@ namespace GameMemory
                     Pic3.Enabled = false;
                     Pic3Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -268,6 +274,7 @@ namespace GameMemory
                     Pic4.Enabled = false;
                     Pic4Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -296,6 +303,7 @@ namespace GameMemory
                     Pic4.Enabled = false;
                     Pic4Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -324,6 +332,7 @@ namespace GameMemory
                     Pic5.Enabled = false;
                     Pic5Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -352,6 +361,7 @@ namespace GameMemory
                     Pic5.Enabled = false;
                     Pic5Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
 
                 }
                 else
@@ -381,6 +391,7 @@ namespace GameMemory
                     Pic6.Enabled = false;
                     Pic6Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -409,6 +420,7 @@ namespace GameMemory
                     Pic6.Enabled = false;
                     Pic6Dup.Enabled = false;
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
                 }
                 else
                 {
@@ -417,6 +429,8 @@ namespace GameMemory
             }
         }
         #endregion
+
+        //В int score содержится финальное количество очков!
 
         private void timer3_Tick(object sender, EventArgs e)
         {
