@@ -21,7 +21,7 @@ namespace GameMemory
         List<int> Y = new List<int>();//list of y coordinates
         List<int> check = new List<int>();
         int timercount;
-        int timeleft=60;
+        //int timeleft=60;
         PictureBox PendingImage1;
         PictureBox PendingImage2;
         public Form1()
@@ -37,6 +37,11 @@ namespace GameMemory
         public void Form1_Load(object sender, EventArgs e)
         {
             label1.Text = "5";
+
+            label3.Text = "60"; //заменить переменной
+
+            ScoreCount.Text = "0";
+
             foreach (PictureBox pic in panel1.Controls)
             {
                 pic.Enabled = false;
@@ -463,13 +468,20 @@ namespace GameMemory
 
         private void TimeLimit_Tick(object sender, EventArgs e)
         {
+            int timeleft = Convert.ToInt32(label3.Text);
+            timeleft = timeleft - 1;
+            label3.Text = Convert.ToString(timeleft);
+
             timercount++;
-            timeleft--;
-            label3.Text = timeleft.ToString();
+            //timeleft--;
+            //label3.Text = timeleft.ToString();
+            score = Convert.ToInt32(ScoreCount.Text);
             if((score == 60)||(timercount==60))
             {
                 TimeLimit.Stop();
                 MessageBox.Show("У вас скор 60!!!!");
+                //передача в бд
+                
             }
 
         }
