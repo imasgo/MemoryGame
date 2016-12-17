@@ -9,7 +9,7 @@ namespace GameMemory
 {
     class Context:DbContext
     {
-        public DbSet<LeaderboardClass> Leaders { get; set; }
+        public  DbSet<LeaderboardClass> Leaders { get; set; }
         public Context():base("localsql")
         {
                 

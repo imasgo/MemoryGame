@@ -20,6 +20,8 @@ namespace GameMemory
         List<int> X = new List<int>();//list of x coordinates
         List<int> Y = new List<int>();//list of y coordinates
         List<int> check = new List<int>();
+        int timercount;
+        int timeleft=60;
         PictureBox PendingImage1;
         PictureBox PendingImage2;
         public Form1()
@@ -38,6 +40,7 @@ namespace GameMemory
             {
                 pic.Enabled = false;
             }
+            TimeLimit.Start();
             timer2.Start();
             timer1.Start();
             Pic1.Image = Properties.Resources.Card1;
@@ -455,6 +458,19 @@ namespace GameMemory
             this.Hide();
             
             mf.Show();
+        }
+
+        private void TimeLimit_Tick(object sender, EventArgs e)
+        {
+            timercount++;
+            timeleft--;
+            label3.Text = timeleft.ToString();
+            if((score == 60)||(timercount==60))
+            {
+                TimeLimit.Stop();
+                MessageBox.Show("У вас скор 60!!!!");
+            }
+
         }
     }
 }
