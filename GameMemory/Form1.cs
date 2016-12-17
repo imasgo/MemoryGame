@@ -21,7 +21,7 @@ namespace GameMemory
         List<int> Y = new List<int>();//list of y coordinates
         List<int> check = new List<int>();
         int timercount;
-        int timeleft=60;
+        int timeleft=65;
         PictureBox PendingImage1;
         PictureBox PendingImage2;
         public Form1()
