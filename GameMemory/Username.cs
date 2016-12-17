@@ -19,7 +19,16 @@ namespace GameMemory
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MenuForm lform = new MenuForm();
+            this.Hide();
+            lform.Show(); //надо подумать как заменить на load мб
+        }
 
+
+        public void Username_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            label3.Text = "";
         }
     }
 }

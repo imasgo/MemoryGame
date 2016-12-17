@@ -17,8 +17,11 @@ namespace GameMemory
         MenuForm mf = new MenuForm();
         bool again = false;//Do you want to play again
         Random Location = new Random();//Chooses random places for each new card
-        List<int> X = new List<int>();//list of x coordinates
-        List<int> Y = new List<int>();//list of y coordinates
+        //List<int> X = new List<int>();//list of x coordinates
+        //List<int> Y = new List<int>();//list of y coordinates
+
+        List<Point> Points = new List<Point>();
+        
         List<int> check = new List<int>();
         int timercount;
         //int timeleft=60;
@@ -45,7 +48,17 @@ namespace GameMemory
             foreach (PictureBox pic in panel1.Controls)
             {
                 pic.Enabled = false;
+                Points.Add(pic.Location);
             }
+
+            foreach (PictureBox pic in panel1.Controls)
+            {
+                int nxt = Location.Next(Points.Count);
+                Point pnt = Points[nxt];
+                pic.Location = pnt;
+                Points.Remove(pnt);
+            }
+
             TimeLimit.Start();
             timer2.Start();
             timer1.Start();
@@ -472,6 +485,8 @@ namespace GameMemory
             timeleft = timeleft - 1;
             label3.Text = Convert.ToString(timeleft);
 
+            Username lform = new Username();
+
             timercount++;
             //timeleft--;
             //label3.Text = timeleft.ToString();
@@ -479,7 +494,17 @@ namespace GameMemory
             if((score == 60)||(timercount==60))
             {
                 TimeLimit.Stop();
-                MessageBox.Show("У вас скор 60!!!!");
+                if (timercount == 60)
+                {
+                    MessageBox.Show("I am poppy");
+                }
+                else
+                {
+                    this.Hide();
+                    lform.Show();
+                    lform.Username_Load(sender,e);
+
+                }
                 //передача в бд
                 
             }
