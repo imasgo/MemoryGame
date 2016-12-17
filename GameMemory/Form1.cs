@@ -41,7 +41,7 @@ namespace GameMemory
         {
             label1.Text = "5";
 
-            label3.Text = "60"; //заменить переменной
+            label3.Text = "30"; //заменить переменной
 
             ScoreCount.Text = "0";
 
@@ -486,17 +486,21 @@ namespace GameMemory
             label3.Text = Convert.ToString(timeleft);
 
             Username lform = new Username();
+            MenuForm lform1 = new MenuForm();
 
-            timercount++;
+            //timercount++;
             //timeleft--;
             //label3.Text = timeleft.ToString();
             score = Convert.ToInt32(ScoreCount.Text);
-            if((score == 60)||(timercount==60))
+            if((score == 60)||(timeleft==0))
             {
                 TimeLimit.Stop();
-                if (timercount == 60)
+                if (timeleft == 0)
                 {
                     MessageBox.Show("I am poppy");
+                    this.Hide();
+                    lform1.Show();
+                    //timercount = 0;
                 }
                 else
                 {
@@ -505,6 +509,7 @@ namespace GameMemory
                     lform.Username_Load(sender,e);
 
                 }
+                
                 //передача в бд
                 
             }
