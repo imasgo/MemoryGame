@@ -281,8 +281,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1036, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.Size = new System.Drawing.Size(14, 20);
             this.label3.TabIndex = 17;
+            this.label3.Text = "t";
             // 
             // Form1
             // 
