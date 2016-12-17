@@ -470,6 +470,7 @@ namespace GameMemory
             {
                 TimeLimit.Stop();
                 MessageBox.Show("У вас скор 60!!!!");
+                System.IO.File.WriteAllText("C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", timercount.ToString());
             }
 
         }

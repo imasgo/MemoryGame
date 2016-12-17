@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.leaderboardDataSet = new GameMemory.LeaderboardDataSet();
             this.leaderboardClassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.leaderboardDataSet = new GameMemory.LeaderboardDataSet();
             this.leaderboardClassesTableAdapter = new GameMemory.LeaderboardDataSetTableAdapters.LeaderboardClassesTableAdapter();
             this.gamerRatingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamerScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,15 +57,15 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // leaderboardDataSet
-            // 
-            this.leaderboardDataSet.DataSetName = "LeaderboardDataSet";
-            this.leaderboardDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // leaderboardClassesBindingSource
             // 
             this.leaderboardClassesBindingSource.DataMember = "LeaderboardClasses";
             this.leaderboardClassesBindingSource.DataSource = this.leaderboardDataSet;
+            // 
+            // leaderboardDataSet
+            // 
+            this.leaderboardDataSet.DataSetName = "LeaderboardDataSet";
+            this.leaderboardDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // leaderboardClassesTableAdapter
             // 
@@ -74,19 +74,19 @@
             // gamerRatingDataGridViewTextBoxColumn
             // 
             this.gamerRatingDataGridViewTextBoxColumn.DataPropertyName = "GamerRating";
-            this.gamerRatingDataGridViewTextBoxColumn.HeaderText = "GamerRating";
+            this.gamerRatingDataGridViewTextBoxColumn.HeaderText = "Ratings";
             this.gamerRatingDataGridViewTextBoxColumn.Name = "gamerRatingDataGridViewTextBoxColumn";
             // 
             // gamerNameDataGridViewTextBoxColumn
             // 
             this.gamerNameDataGridViewTextBoxColumn.DataPropertyName = "GamerName";
-            this.gamerNameDataGridViewTextBoxColumn.HeaderText = "GamerName";
+            this.gamerNameDataGridViewTextBoxColumn.HeaderText = "Username";
             this.gamerNameDataGridViewTextBoxColumn.Name = "gamerNameDataGridViewTextBoxColumn";
             // 
             // gamerScoreDataGridViewTextBoxColumn
             // 
             this.gamerScoreDataGridViewTextBoxColumn.DataPropertyName = "GamerScore";
-            this.gamerScoreDataGridViewTextBoxColumn.HeaderText = "GamerScore";
+            this.gamerScoreDataGridViewTextBoxColumn.HeaderText = "Score";
             this.gamerScoreDataGridViewTextBoxColumn.Name = "gamerScoreDataGridViewTextBoxColumn";
             // 
             // LeaderBoardsForm
@@ -100,8 +100,8 @@
             this.Text = "LeaderBoardsForm";
             this.Load += new System.EventHandler(this.LeaderBoardsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
