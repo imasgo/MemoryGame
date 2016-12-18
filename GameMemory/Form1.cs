@@ -13,12 +13,15 @@ namespace GameMemory
     public partial class Form1 : Form
     {
         //Variables
+
+        int tmrst;
         int score = 0;//score
         MenuForm mf = new MenuForm();
         //bool again = false;//Do you want to play again
         Random Location = new Random();//Chooses random places for each new card
         //List<int> X = new List<int>();//list of x coordinates
         //List<int> Y = new List<int>();//list of y coordinates
+        int timerset;
 
         List<Point> Points = new List<Point>();
 
@@ -64,8 +67,9 @@ namespace GameMemory
                     label3.Text = "40";
                     break;
 
-
             }
+            tmrst = int.Parse(label3.Text);
+
             //if (label4.Text == "Medium")
             //{
             //    label3.Text = "40"; //заменить переменной
@@ -588,17 +592,19 @@ namespace GameMemory
                 }
                 else
                 {
+                    //timerset = int.Parse(label3.Text);
                     this.Hide();
                     lform.Show();
                     lform.Username_Load(sender,e);
                     using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                     {
-                        int gametime = 30 - timeleft;
+
+                        int gametime = tmrst - timeleft;
                                 file.Write(gametime.ToString()+",");
                             
                     }
-                    int gametime1 = 30 - timeleft;
+                    //int gametime1 = 30 - timeleft;
                    // System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
 
                 }
@@ -606,6 +612,11 @@ namespace GameMemory
                 //передача в бд
                 
             }
+
+        }
+
+        private void ScoreCount_Click(object sender, EventArgs e)
+        {
 
         }
     }

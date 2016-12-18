@@ -34,17 +34,21 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(72, 47);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(108, 72);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(406, 173);
+            this.listBox1.Size = new System.Drawing.Size(607, 264);
             this.listBox1.TabIndex = 0;
             // 
             // LeaderList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 305);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(846, 469);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LeaderList";
             this.Text = "LeaderList";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LeaderList_FormClosing);

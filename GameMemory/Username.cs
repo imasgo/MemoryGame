@@ -52,7 +52,7 @@ namespace GameMemory
         {
             textBox1.Text = "";
 
-            label3.Text = "";
+           
         }
 
         private void Username_FormClosing(object sender, FormClosingEventArgs e)
