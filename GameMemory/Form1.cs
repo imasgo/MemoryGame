@@ -171,7 +171,7 @@ namespace GameMemory
             
 
             
-            string path = "C:/Users/Dima/Source/Repos/MemoryGame/GameMemory/Resources/Picture" + s;
+            string path = "../../../GameMemory/Resources/Picture" + s;
             pic.Image = Image.FromFile(path);
 
 
@@ -270,7 +270,7 @@ namespace GameMemory
                     lform.Username_Load(sender,e);
 
                     using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
+            new System.IO.StreamWriter(@"../../../DbDataGame.txt", true))
                     {
 
                         int gametime = tmrst - timeleft;
