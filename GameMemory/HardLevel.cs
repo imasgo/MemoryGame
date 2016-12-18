@@ -39,11 +39,18 @@ namespace GameMemory
         private void button1_Click(object sender, EventArgs e)
         {
             ComboData = comboBox1.Text;
-            Form1 lform = new Form1(comboBox1.Text);
-            //скрывает менюшку
-            this.Hide();
-            lform.Show();
-            lform.Form1_Load(sender, e);
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Выберите значение!");
+            }
+            else
+            {
+                Form1 lform = new Form1(comboBox1.Text);
+                //скрывает менюшку
+                this.Hide();
+                lform.Show();
+                lform.Form1_Load(sender, e);
+            }
 
         }
 

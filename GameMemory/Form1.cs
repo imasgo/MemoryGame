@@ -55,13 +55,13 @@ namespace GameMemory
             switch (str)
             {
                 case "Easy":
-                    label3.Text = "40";
+                    label3.Text = "90";
                     break;
                 case "Medium":
                     label3.Text = "60";
                     break;
                 case "Hard":
-                    label3.Text = "90";
+                    label3.Text = "40";
                     break;
 
 

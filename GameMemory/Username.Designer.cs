@@ -38,7 +38,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(149, 99);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(149, 179);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(176, 45);
             this.button1.TabIndex = 1;
@@ -94,9 +94,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Username";
             this.Text = "Username";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Username_FormClosing);
             this.Load += new System.EventHandler(this.Username_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
