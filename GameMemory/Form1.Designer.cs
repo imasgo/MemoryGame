@@ -30,28 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ScoreLabel = new System.Windows.Forms.Label();
-            this.ScoreCount = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.buttonback = new System.Windows.Forms.Button();
-            this.TimeLimit = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Pic12Dup = new System.Windows.Forms.PictureBox();
-            this.Pic12 = new System.Windows.Forms.PictureBox();
-            this.Pic11Dup = new System.Windows.Forms.PictureBox();
-            this.Pic11 = new System.Windows.Forms.PictureBox();
-            this.Pic10Dup = new System.Windows.Forms.PictureBox();
-            this.Pic10 = new System.Windows.Forms.PictureBox();
-            this.Pic9Dup = new System.Windows.Forms.PictureBox();
-            this.Pic9 = new System.Windows.Forms.PictureBox();
-            this.Pic8Dup = new System.Windows.Forms.PictureBox();
-            this.Pic8 = new System.Windows.Forms.PictureBox();
-            this.Pic7Dup = new System.Windows.Forms.PictureBox();
-            this.Pic7 = new System.Windows.Forms.PictureBox();
             this.Pic6Dup = new System.Windows.Forms.PictureBox();
             this.Pic6 = new System.Windows.Forms.PictureBox();
             this.Pic5Dup = new System.Windows.Forms.PictureBox();
@@ -64,19 +42,18 @@
             this.Pic2 = new System.Windows.Forms.PictureBox();
             this.Pic1Dup = new System.Windows.Forms.PictureBox();
             this.Pic1 = new System.Windows.Forms.PictureBox();
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.ScoreCount = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.buttonback = new System.Windows.Forms.Button();
+            this.TimeLimit = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic12Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic11Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic10Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic9Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic8Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic7Dup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6Dup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic5Dup)).BeginInit();
@@ -93,18 +70,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Pic12Dup);
-            this.panel1.Controls.Add(this.Pic12);
-            this.panel1.Controls.Add(this.Pic11Dup);
-            this.panel1.Controls.Add(this.Pic11);
-            this.panel1.Controls.Add(this.Pic10Dup);
-            this.panel1.Controls.Add(this.Pic10);
-            this.panel1.Controls.Add(this.Pic9Dup);
-            this.panel1.Controls.Add(this.Pic9);
-            this.panel1.Controls.Add(this.Pic8Dup);
-            this.panel1.Controls.Add(this.Pic8);
-            this.panel1.Controls.Add(this.Pic7Dup);
-            this.panel1.Controls.Add(this.Pic7);
             this.panel1.Controls.Add(this.Pic6Dup);
             this.panel1.Controls.Add(this.Pic6);
             this.panel1.Controls.Add(this.Pic5Dup);
@@ -117,17 +82,153 @@
             this.panel1.Controls.Add(this.Pic2);
             this.panel1.Controls.Add(this.Pic1Dup);
             this.panel1.Controls.Add(this.Pic1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 497);
+            this.panel1.Size = new System.Drawing.Size(609, 461);
             this.panel1.TabIndex = 0;
+            // 
+            // Pic6Dup
+            // 
+            this.Pic6Dup.Location = new System.Drawing.Point(460, 315);
+            this.Pic6Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic6Dup.Name = "Pic6Dup";
+            this.Pic6Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic6Dup.TabIndex = 11;
+            this.Pic6Dup.TabStop = false;
+            this.Pic6Dup.Tag = "6";
+            this.Pic6Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic6
+            // 
+            this.Pic6.Location = new System.Drawing.Point(311, 315);
+            this.Pic6.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic6.Name = "Pic6";
+            this.Pic6.Size = new System.Drawing.Size(133, 130);
+            this.Pic6.TabIndex = 10;
+            this.Pic6.TabStop = false;
+            this.Pic6.Tag = "6";
+            this.Pic6.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic5Dup
+            // 
+            this.Pic5Dup.Location = new System.Drawing.Point(162, 315);
+            this.Pic5Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic5Dup.Name = "Pic5Dup";
+            this.Pic5Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic5Dup.TabIndex = 9;
+            this.Pic5Dup.TabStop = false;
+            this.Pic5Dup.Tag = "5";
+            this.Pic5Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic5
+            // 
+            this.Pic5.Location = new System.Drawing.Point(13, 315);
+            this.Pic5.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic5.Name = "Pic5";
+            this.Pic5.Size = new System.Drawing.Size(133, 130);
+            this.Pic5.TabIndex = 8;
+            this.Pic5.TabStop = false;
+            this.Pic5.Tag = "5";
+            this.Pic5.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic4Dup
+            // 
+            this.Pic4Dup.Location = new System.Drawing.Point(460, 162);
+            this.Pic4Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic4Dup.Name = "Pic4Dup";
+            this.Pic4Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic4Dup.TabIndex = 7;
+            this.Pic4Dup.TabStop = false;
+            this.Pic4Dup.Tag = "4";
+            this.Pic4Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic4
+            // 
+            this.Pic4.Location = new System.Drawing.Point(311, 162);
+            this.Pic4.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic4.Name = "Pic4";
+            this.Pic4.Size = new System.Drawing.Size(133, 130);
+            this.Pic4.TabIndex = 6;
+            this.Pic4.TabStop = false;
+            this.Pic4.Tag = "4";
+            this.Pic4.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic3Dup
+            // 
+            this.Pic3Dup.Location = new System.Drawing.Point(162, 162);
+            this.Pic3Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic3Dup.Name = "Pic3Dup";
+            this.Pic3Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic3Dup.TabIndex = 5;
+            this.Pic3Dup.TabStop = false;
+            this.Pic3Dup.Tag = "3";
+            this.Pic3Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic3
+            // 
+            this.Pic3.Location = new System.Drawing.Point(13, 162);
+            this.Pic3.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic3.Name = "Pic3";
+            this.Pic3.Size = new System.Drawing.Size(133, 130);
+            this.Pic3.TabIndex = 4;
+            this.Pic3.TabStop = false;
+            this.Pic3.Tag = "3";
+            this.Pic3.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic2Dup
+            // 
+            this.Pic2Dup.Location = new System.Drawing.Point(459, 11);
+            this.Pic2Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic2Dup.Name = "Pic2Dup";
+            this.Pic2Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic2Dup.TabIndex = 3;
+            this.Pic2Dup.TabStop = false;
+            this.Pic2Dup.Tag = "2";
+            this.Pic2Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic2
+            // 
+            this.Pic2.Location = new System.Drawing.Point(310, 11);
+            this.Pic2.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic2.Name = "Pic2";
+            this.Pic2.Size = new System.Drawing.Size(133, 130);
+            this.Pic2.TabIndex = 2;
+            this.Pic2.TabStop = false;
+            this.Pic2.Tag = "2";
+            this.Pic2.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic1Dup
+            // 
+            this.Pic1Dup.Image = global::GameMemory.Properties.Resources.Card6;
+            this.Pic1Dup.Location = new System.Drawing.Point(161, 11);
+            this.Pic1Dup.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic1Dup.Name = "Pic1Dup";
+            this.Pic1Dup.Size = new System.Drawing.Size(133, 130);
+            this.Pic1Dup.TabIndex = 1;
+            this.Pic1Dup.TabStop = false;
+            this.Pic1Dup.Tag = "1";
+            this.Pic1Dup.Click += new System.EventHandler(this.PicClick);
+            // 
+            // Pic1
+            // 
+            this.Pic1.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
+            this.Pic1.Location = new System.Drawing.Point(13, 11);
+            this.Pic1.Margin = new System.Windows.Forms.Padding(2);
+            this.Pic1.Name = "Pic1";
+            this.Pic1.Size = new System.Drawing.Size(133, 130);
+            this.Pic1.TabIndex = 0;
+            this.Pic1.TabStop = false;
+            this.Pic1.Tag = "1";
+            this.Pic1.Click += new System.EventHandler(this.PicClick);
             // 
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Location = new System.Drawing.Point(952, 29);
+            this.ScoreLabel.Location = new System.Drawing.Point(635, 19);
+            this.ScoreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(55, 20);
+            this.ScoreLabel.Size = new System.Drawing.Size(38, 13);
             this.ScoreLabel.TabIndex = 12;
             this.ScoreLabel.Text = "Score:";
             this.ScoreLabel.Click += new System.EventHandler(this.label1_Click);
@@ -135,9 +236,10 @@
             // ScoreCount
             // 
             this.ScoreCount.AutoSize = true;
-            this.ScoreCount.Location = new System.Drawing.Point(1014, 29);
+            this.ScoreCount.Location = new System.Drawing.Point(676, 19);
+            this.ScoreCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ScoreCount.Name = "ScoreCount";
-            this.ScoreCount.Size = new System.Drawing.Size(18, 20);
+            this.ScoreCount.Size = new System.Drawing.Size(13, 13);
             this.ScoreCount.TabIndex = 13;
             this.ScoreCount.Text = "0";
             // 
@@ -149,9 +251,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(988, 65);
+            this.label1.Location = new System.Drawing.Point(659, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 20);
+            this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "5";
             // 
@@ -167,10 +270,9 @@
             // 
             // buttonback
             // 
-            this.buttonback.Location = new System.Drawing.Point(934, 393);
-            this.buttonback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonback.Location = new System.Drawing.Point(679, 356);
             this.buttonback.Name = "buttonback";
-            this.buttonback.Size = new System.Drawing.Size(162, 69);
+            this.buttonback.Size = new System.Drawing.Size(108, 45);
             this.buttonback.TabIndex = 15;
             this.buttonback.Text = "Back to black";
             this.buttonback.UseVisualStyleBackColor = true;
@@ -184,288 +286,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(958, 108);
+            this.label2.Location = new System.Drawing.Point(639, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Time left:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1036, 106);
+            this.label3.Location = new System.Drawing.Point(691, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 20);
+            this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "t";
             // 
-            // Pic12Dup
+            // label4
             // 
-            this.Pic12Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic12Dup.Location = new System.Drawing.Point(762, 329);
-            this.Pic12Dup.Name = "Pic12Dup";
-            this.Pic12Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic12Dup.TabIndex = 23;
-            this.Pic12Dup.TabStop = false;
-            this.Pic12Dup.Tag = "1";
-            this.Pic12Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic12
-            // 
-            this.Pic12.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic12.Location = new System.Drawing.Point(656, 329);
-            this.Pic12.Name = "Pic12";
-            this.Pic12.Size = new System.Drawing.Size(100, 150);
-            this.Pic12.TabIndex = 22;
-            this.Pic12.TabStop = false;
-            this.Pic12.Tag = "1";
-            this.Pic12.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic11Dup
-            // 
-            this.Pic11Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic11Dup.Location = new System.Drawing.Point(550, 329);
-            this.Pic11Dup.Name = "Pic11Dup";
-            this.Pic11Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic11Dup.TabIndex = 21;
-            this.Pic11Dup.TabStop = false;
-            this.Pic11Dup.Tag = "1";
-            this.Pic11Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic11
-            // 
-            this.Pic11.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic11.Location = new System.Drawing.Point(444, 329);
-            this.Pic11.Name = "Pic11";
-            this.Pic11.Size = new System.Drawing.Size(100, 150);
-            this.Pic11.TabIndex = 20;
-            this.Pic11.TabStop = false;
-            this.Pic11.Tag = "1";
-            this.Pic11.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic10Dup
-            // 
-            this.Pic10Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic10Dup.Location = new System.Drawing.Point(338, 329);
-            this.Pic10Dup.Name = "Pic10Dup";
-            this.Pic10Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic10Dup.TabIndex = 19;
-            this.Pic10Dup.TabStop = false;
-            this.Pic10Dup.Tag = "1";
-            // 
-            // Pic10
-            // 
-            this.Pic10.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic10.Location = new System.Drawing.Point(232, 329);
-            this.Pic10.Name = "Pic10";
-            this.Pic10.Size = new System.Drawing.Size(100, 150);
-            this.Pic10.TabIndex = 18;
-            this.Pic10.TabStop = false;
-            this.Pic10.Tag = "1";
-            this.Pic10.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic9Dup
-            // 
-            this.Pic9Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic9Dup.Location = new System.Drawing.Point(126, 329);
-            this.Pic9Dup.Name = "Pic9Dup";
-            this.Pic9Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic9Dup.TabIndex = 17;
-            this.Pic9Dup.TabStop = false;
-            this.Pic9Dup.Tag = "1";
-            this.Pic9Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic9
-            // 
-            this.Pic9.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic9.Location = new System.Drawing.Point(20, 329);
-            this.Pic9.Name = "Pic9";
-            this.Pic9.Size = new System.Drawing.Size(100, 150);
-            this.Pic9.TabIndex = 16;
-            this.Pic9.TabStop = false;
-            this.Pic9.Tag = "1";
-            this.Pic9.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic8Dup
-            // 
-            this.Pic8Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic8Dup.Location = new System.Drawing.Point(762, 173);
-            this.Pic8Dup.Name = "Pic8Dup";
-            this.Pic8Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic8Dup.TabIndex = 15;
-            this.Pic8Dup.TabStop = false;
-            this.Pic8Dup.Tag = "1";
-            this.Pic8Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic8
-            // 
-            this.Pic8.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic8.Location = new System.Drawing.Point(656, 173);
-            this.Pic8.Name = "Pic8";
-            this.Pic8.Size = new System.Drawing.Size(100, 150);
-            this.Pic8.TabIndex = 14;
-            this.Pic8.TabStop = false;
-            this.Pic8.Tag = "1";
-            this.Pic8.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic7Dup
-            // 
-            this.Pic7Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic7Dup.Location = new System.Drawing.Point(550, 173);
-            this.Pic7Dup.Name = "Pic7Dup";
-            this.Pic7Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic7Dup.TabIndex = 13;
-            this.Pic7Dup.TabStop = false;
-            this.Pic7Dup.Tag = "1";
-            // 
-            // Pic7
-            // 
-            this.Pic7.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic7.Location = new System.Drawing.Point(444, 173);
-            this.Pic7.Name = "Pic7";
-            this.Pic7.Size = new System.Drawing.Size(100, 150);
-            this.Pic7.TabIndex = 12;
-            this.Pic7.TabStop = false;
-            this.Pic7.Tag = "1";
-            this.Pic7.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic6Dup
-            // 
-            this.Pic6Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic6Dup.Location = new System.Drawing.Point(338, 173);
-            this.Pic6Dup.Name = "Pic6Dup";
-            this.Pic6Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic6Dup.TabIndex = 11;
-            this.Pic6Dup.TabStop = false;
-            this.Pic6Dup.Tag = "1";
-            this.Pic6Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic6
-            // 
-            this.Pic6.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic6.Location = new System.Drawing.Point(232, 173);
-            this.Pic6.Name = "Pic6";
-            this.Pic6.Size = new System.Drawing.Size(100, 150);
-            this.Pic6.TabIndex = 10;
-            this.Pic6.TabStop = false;
-            this.Pic6.Tag = "1";
-            this.Pic6.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic5Dup
-            // 
-            this.Pic5Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic5Dup.Location = new System.Drawing.Point(126, 173);
-            this.Pic5Dup.Name = "Pic5Dup";
-            this.Pic5Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic5Dup.TabIndex = 9;
-            this.Pic5Dup.TabStop = false;
-            this.Pic5Dup.Tag = "1";
-            this.Pic5Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic5
-            // 
-            this.Pic5.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic5.Location = new System.Drawing.Point(20, 173);
-            this.Pic5.Name = "Pic5";
-            this.Pic5.Size = new System.Drawing.Size(100, 150);
-            this.Pic5.TabIndex = 8;
-            this.Pic5.TabStop = false;
-            this.Pic5.Tag = "1";
-            this.Pic5.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic4Dup
-            // 
-            this.Pic4Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic4Dup.Location = new System.Drawing.Point(762, 17);
-            this.Pic4Dup.Name = "Pic4Dup";
-            this.Pic4Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic4Dup.TabIndex = 7;
-            this.Pic4Dup.TabStop = false;
-            this.Pic4Dup.Tag = "1";
-            this.Pic4Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic4
-            // 
-            this.Pic4.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic4.Location = new System.Drawing.Point(656, 17);
-            this.Pic4.Name = "Pic4";
-            this.Pic4.Size = new System.Drawing.Size(100, 150);
-            this.Pic4.TabIndex = 6;
-            this.Pic4.TabStop = false;
-            this.Pic4.Tag = "1";
-            this.Pic4.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic3Dup
-            // 
-            this.Pic3Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic3Dup.Location = new System.Drawing.Point(550, 17);
-            this.Pic3Dup.Name = "Pic3Dup";
-            this.Pic3Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic3Dup.TabIndex = 5;
-            this.Pic3Dup.TabStop = false;
-            this.Pic3Dup.Tag = "1";
-            this.Pic3Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic3
-            // 
-            this.Pic3.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic3.Location = new System.Drawing.Point(444, 17);
-            this.Pic3.Name = "Pic3";
-            this.Pic3.Size = new System.Drawing.Size(100, 150);
-            this.Pic3.TabIndex = 4;
-            this.Pic3.TabStop = false;
-            this.Pic3.Tag = "1";
-            this.Pic3.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic2Dup
-            // 
-            this.Pic2Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic2Dup.Location = new System.Drawing.Point(338, 17);
-            this.Pic2Dup.Name = "Pic2Dup";
-            this.Pic2Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic2Dup.TabIndex = 3;
-            this.Pic2Dup.TabStop = false;
-            this.Pic2Dup.Tag = "1";
-            this.Pic2Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic2
-            // 
-            this.Pic2.Image = global::GameMemory.Properties.Resources.MdzRlewvieo1;
-            this.Pic2.Location = new System.Drawing.Point(232, 17);
-            this.Pic2.Name = "Pic2";
-            this.Pic2.Size = new System.Drawing.Size(100, 150);
-            this.Pic2.TabIndex = 2;
-            this.Pic2.TabStop = false;
-            this.Pic2.Tag = "1";
-            this.Pic2.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic1Dup
-            // 
-            this.Pic1Dup.Image = global::GameMemory.Properties.Resources.Card6;
-            this.Pic1Dup.Location = new System.Drawing.Point(126, 17);
-            this.Pic1Dup.Name = "Pic1Dup";
-            this.Pic1Dup.Size = new System.Drawing.Size(100, 150);
-            this.Pic1Dup.TabIndex = 1;
-            this.Pic1Dup.TabStop = false;
-            this.Pic1Dup.Tag = "1";
-            this.Pic1Dup.Click += new System.EventHandler(this.PicClick);
-            // 
-            // Pic1
-            // 
-            this.Pic1.Image = global::GameMemory.Properties.Resources.Card1;
-            this.Pic1.Location = new System.Drawing.Point(20, 17);
-            this.Pic1.Name = "Pic1";
-            this.Pic1.Size = new System.Drawing.Size(100, 150);
-            this.Pic1.TabIndex = 0;
-            this.Pic1.TabStop = false;
-            this.Pic1.Tag = "1";
-            this.Pic1.Click += new System.EventHandler(this.PicClick);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(665, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "label4";
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1158, 540);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(835, 467);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonback);
@@ -473,26 +325,12 @@
             this.Controls.Add(this.ScoreCount);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pic12Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic11Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic10Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic9Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic8Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic7Dup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6Dup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic5Dup)).EndInit();
@@ -513,6 +351,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox Pic6Dup;
+        private System.Windows.Forms.PictureBox Pic6;
+        private System.Windows.Forms.PictureBox Pic5Dup;
+        private System.Windows.Forms.PictureBox Pic5;
+        private System.Windows.Forms.PictureBox Pic4Dup;
+        private System.Windows.Forms.PictureBox Pic4;
+        private System.Windows.Forms.PictureBox Pic3Dup;
+        private System.Windows.Forms.PictureBox Pic3;
+        private System.Windows.Forms.PictureBox Pic2Dup;
+        private System.Windows.Forms.PictureBox Pic2;
         private System.Windows.Forms.PictureBox Pic1Dup;
         private System.Windows.Forms.PictureBox Pic1;
         private System.Windows.Forms.Label ScoreLabel;
@@ -525,28 +373,7 @@
         private System.Windows.Forms.Timer TimeLimit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox Pic12Dup;
-        private System.Windows.Forms.PictureBox Pic12;
-        private System.Windows.Forms.PictureBox Pic11Dup;
-        private System.Windows.Forms.PictureBox Pic11;
-        private System.Windows.Forms.PictureBox Pic10Dup;
-        private System.Windows.Forms.PictureBox Pic10;
-        private System.Windows.Forms.PictureBox Pic9Dup;
-        private System.Windows.Forms.PictureBox Pic9;
-        private System.Windows.Forms.PictureBox Pic8Dup;
-        private System.Windows.Forms.PictureBox Pic8;
-        private System.Windows.Forms.PictureBox Pic7Dup;
-        private System.Windows.Forms.PictureBox Pic7;
-        private System.Windows.Forms.PictureBox Pic2;
-        private System.Windows.Forms.PictureBox Pic2Dup;
-        private System.Windows.Forms.PictureBox Pic3;
-        private System.Windows.Forms.PictureBox Pic3Dup;
-        private System.Windows.Forms.PictureBox Pic4;
-        private System.Windows.Forms.PictureBox Pic4Dup;
-        private System.Windows.Forms.PictureBox Pic5;
-        private System.Windows.Forms.PictureBox Pic5Dup;
-        private System.Windows.Forms.PictureBox Pic6;
-        private System.Windows.Forms.PictureBox Pic6Dup;
+        private System.Windows.Forms.Label label4;
     }
 }
 

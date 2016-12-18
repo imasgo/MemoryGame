@@ -10,7 +10,7 @@ namespace GameMemory
 {
     class MenuLauncher
     {
-        static Form1 lform = new Form1();
+        //static Form1 lform = new Form1();
         
         static LeaderList lform2= new LeaderList();
 

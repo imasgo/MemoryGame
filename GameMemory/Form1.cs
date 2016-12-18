@@ -21,19 +21,26 @@ namespace GameMemory
         //List<int> Y = new List<int>();//list of y coordinates
 
         List<Point> Points = new List<Point>();
-        
+
         List<int> check = new List<int>();
         int timercount;
         //int timeleft=60;
         PictureBox PendingImage1;
 
         PictureBox PendingImage2;
-        
 
-        public Form1()
+        HardLevel hrd;
+
+        public Form1(string str)
         {
             InitializeComponent();
+            label4.Text = str;
         }
+           
+
+       
+
+    
         // i like u
         private void label1_Click(object sender, EventArgs e)
         {
@@ -43,8 +50,26 @@ namespace GameMemory
         public void Form1_Load(object sender, EventArgs e)
         {
             label1.Text = "5";
+            string str = label4.Text;
 
-            label3.Text = "30"; //заменить переменной
+            switch (str)
+            {
+                case "Easy":
+                    label3.Text = "40";
+                    break;
+                case "Medium":
+                    label3.Text = "60";
+                    break;
+                case "Hard":
+                    label3.Text = "90";
+                    break;
+
+
+            }
+            //if (label4.Text == "Medium")
+            //{
+            //    label3.Text = "40"; //заменить переменной
+            //}
 
             ScoreCount.Text = "0";
 
@@ -139,10 +164,12 @@ namespace GameMemory
             }
             if (PendingImage1 != null && PendingImage2 != null)
             {
-                if (PendingImage1.Tag == PendingImage2.Tag)
+                if ((PendingImage1.Tag == PendingImage2.Tag) && (PendingImage1.Location!=PendingImage2.Location))
                 {
+                    
                     PendingImage1 = null;
                     PendingImage2 = null;
+
                     pic.Enabled = false;
                     //Pic1.Enabled=false;
                     //Pic1Dup.Enabled = false;
