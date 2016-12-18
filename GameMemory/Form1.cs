@@ -14,22 +14,22 @@ namespace GameMemory
     public partial class Form1 : Form
     {
         //Variables
-
-        int tmrst;
-        int score = 0;//score
         int score = 0;
 
         //For going back to menu
+
+        int tmrst;
+        int score = 0;//score
         MenuForm mf = new MenuForm();
 
         //Random choice of location
         Random Location = new Random();//Chooses random places for each new card
+        
+        //Location list
         //List<int> X = new List<int>();//list of x coordinates
         //List<int> Y = new List<int>();//list of y coordinates
         int timerset;
 
-        
-        //Location list
         List<Point> Points = new List<Point>();
 
 
