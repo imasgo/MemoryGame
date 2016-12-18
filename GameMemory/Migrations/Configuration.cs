@@ -34,7 +34,7 @@ namespace GameMemory.Migrations
             while ((line = file.ReadLine()) != null)
             {
                 string[] newline = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass { GamerName = newline[1], GamerRating = 1, GamerScore = newline[0] });
+                context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass { GamerName = newline[1], GamerRating = int.Parse(newline[0]), GamerScore = "1" });
 
             }
             file.Close();

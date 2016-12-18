@@ -33,12 +33,13 @@
             this.leaderboardClassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.leaderboardDataSet = new GameMemory.LeaderboardDataSet();
             this.leaderboardClassesTableAdapter = new GameMemory.LeaderboardDataSetTableAdapters.LeaderboardClassesTableAdapter();
-            this.gamerRatingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leaderboardClassesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gamerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gamerScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GamerRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -46,14 +47,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gamerRatingDataGridViewTextBoxColumn,
             this.gamerNameDataGridViewTextBoxColumn,
-            this.gamerScoreDataGridViewTextBoxColumn});
+            this.GamerRating});
             this.dataGridView1.DataSource = this.leaderboardClassesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(193, 63);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 277);
+            this.dataGridView1.Size = new System.Drawing.Size(1013, 645);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -61,6 +62,7 @@
             // 
             this.leaderboardClassesBindingSource.DataMember = "LeaderboardClasses";
             this.leaderboardClassesBindingSource.DataSource = this.leaderboardDataSet;
+            this.leaderboardClassesBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.leaderboardClassesBindingSource_AddingNew);
             // 
             // leaderboardDataSet
             // 
@@ -71,11 +73,10 @@
             // 
             this.leaderboardClassesTableAdapter.ClearBeforeFill = true;
             // 
-            // gamerRatingDataGridViewTextBoxColumn
+            // leaderboardClassesBindingSource1
             // 
-            this.gamerRatingDataGridViewTextBoxColumn.DataPropertyName = "GamerRating";
-            this.gamerRatingDataGridViewTextBoxColumn.HeaderText = "Ratings";
-            this.gamerRatingDataGridViewTextBoxColumn.Name = "gamerRatingDataGridViewTextBoxColumn";
+            this.leaderboardClassesBindingSource1.DataMember = "LeaderboardClasses";
+            this.leaderboardClassesBindingSource1.DataSource = this.leaderboardDataSet;
             // 
             // gamerNameDataGridViewTextBoxColumn
             // 
@@ -83,11 +84,11 @@
             this.gamerNameDataGridViewTextBoxColumn.HeaderText = "Username";
             this.gamerNameDataGridViewTextBoxColumn.Name = "gamerNameDataGridViewTextBoxColumn";
             // 
-            // gamerScoreDataGridViewTextBoxColumn
+            // GamerRating
             // 
-            this.gamerScoreDataGridViewTextBoxColumn.DataPropertyName = "GamerScore";
-            this.gamerScoreDataGridViewTextBoxColumn.HeaderText = "Score";
-            this.gamerScoreDataGridViewTextBoxColumn.Name = "gamerScoreDataGridViewTextBoxColumn";
+            this.GamerRating.DataPropertyName = "GamerRating";
+            this.GamerRating.HeaderText = "GamerRating";
+            this.GamerRating.Name = "GamerRating";
             // 
             // LeaderBoardsForm
             // 
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaderboardClassesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,8 +114,8 @@
         private LeaderboardDataSet leaderboardDataSet;
         private System.Windows.Forms.BindingSource leaderboardClassesBindingSource;
         private LeaderboardDataSetTableAdapters.LeaderboardClassesTableAdapter leaderboardClassesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gamerScoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource leaderboardClassesBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GamerRating;
         private System.Windows.Forms.DataGridViewTextBoxColumn gamerNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gamerRatingDataGridViewTextBoxColumn;
     }
 }
