@@ -19,11 +19,13 @@ namespace GameMemory
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //exception fix
             if (textBox1.Text != "")
             {
                 MenuForm lform = new MenuForm();
                 this.Hide();
                 lform.Show();
+                //writing name to file
                 using (System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                 {
@@ -37,14 +39,7 @@ namespace GameMemory
 
                 MessageBox.Show("Введите имя!");
             }
-           // using (System.IO.StreamWriter file =
-           //new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
-           // {
 
-           //     file.WriteLine(textBox1.Text);
-
-           // }
-            //надо подумать как заменить на load мб
         }
 
 
@@ -55,6 +50,7 @@ namespace GameMemory
            
         }
 
+        //closing and going back to menu
         private void Username_FormClosing(object sender, FormClosingEventArgs e)
         {
             MenuForm lform = new MenuForm();
