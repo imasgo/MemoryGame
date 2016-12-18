@@ -19,15 +19,23 @@ namespace GameMemory
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm lform = new MenuForm();
-            this.Hide();
-            lform.Show();
-            using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
+            if (textBox1.Text != "")
+            {
+                MenuForm lform = new MenuForm();
+                this.Hide();
+                lform.Show();
+                using (System.IO.StreamWriter file =
+                new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
+                {
+
+                    file.WriteLine(textBox1.Text);
+
+                }
+            }
+            else
             {
 
-                file.WriteLine(textBox1.Text);
-
+                MessageBox.Show("Введите имя!");
             }
            // using (System.IO.StreamWriter file =
            //new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
@@ -45,6 +53,13 @@ namespace GameMemory
             textBox1.Text = "";
 
             label3.Text = "";
+        }
+
+        private void Username_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MenuForm lform = new MenuForm();
+            this.Hide();
+            lform.Show();
         }
     }
 }
