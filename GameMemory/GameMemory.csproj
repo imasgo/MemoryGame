@@ -220,6 +220,45 @@
   <ItemGroup>
     <None Include="Resources\card.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoverPicture.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

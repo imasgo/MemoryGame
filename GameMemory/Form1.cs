@@ -93,30 +93,30 @@ namespace GameMemory
             timer1.Start();
 
             //list of 
-            Pic1.Image = Properties.Resources.Card1;
-            Pic1Dup.Image = Properties.Resources.Card1;
-            Pic2.Image = Properties.Resources.Card2;
-            Pic2Dup.Image = Properties.Resources.Card2;
-            Pic3.Image = Properties.Resources.Card3;
-            Pic3Dup.Image = Properties.Resources.Card3;
-            Pic4.Image = Properties.Resources.Card4;
-            Pic4Dup.Image = Properties.Resources.Card4;
-            Pic5.Image = Properties.Resources.Card5;
-            Pic5Dup.Image = Properties.Resources.Card5;
-            Pic6.Image = Properties.Resources.Card6;
-            Pic6Dup.Image = Properties.Resources.Card6;
-            Pic7.Image = Properties.Resources.Card6;
-            Pic7Dup.Image = Properties.Resources.Card6;
-            Pic8.Image = Properties.Resources.Card6;
-            Pic8Dup.Image = Properties.Resources.Card6;
-            Pic9.Image = Properties.Resources.Card6;
-            Pic9Dup.Image = Properties.Resources.Card6;
-            Pic10.Image = Properties.Resources.Card6;
-            Pic10Dup.Image = Properties.Resources.Card6;
-            Pic11.Image = Properties.Resources.Card6;
-            Pic11Dup.Image = Properties.Resources.Card6;
-            Pic12.Image = Properties.Resources.Card6;
-            Pic12Dup.Image = Properties.Resources.Card6;
+            Pic1.Image = Properties.Resources.Picture1;
+            Pic1Dup.Image = Properties.Resources.Picture1;
+            Pic2.Image = Properties.Resources.Picture2;
+            Pic2Dup.Image = Properties.Resources.Picture2;
+            Pic3.Image = Properties.Resources.Picture3;
+            Pic3Dup.Image = Properties.Resources.Picture3;
+            Pic4.Image = Properties.Resources.Picture4;
+            Pic4Dup.Image = Properties.Resources.Picture4;
+            Pic5.Image = Properties.Resources.Picture5;
+            Pic5Dup.Image = Properties.Resources.Picture5;
+            Pic6.Image = Properties.Resources.Picture6;
+            Pic6Dup.Image = Properties.Resources.Picture6;
+            Pic7.Image = Properties.Resources.Picture7;
+            Pic7Dup.Image = Properties.Resources.Picture7;
+            Pic8.Image = Properties.Resources.Picture8;
+            Pic8Dup.Image = Properties.Resources.Picture8;
+            Pic9.Image = Properties.Resources.Picture9;
+            Pic9Dup.Image = Properties.Resources.Picture9;
+            Pic10.Image = Properties.Resources.Picture10;
+            Pic10Dup.Image = Properties.Resources.Picture10;
+            Pic11.Image = Properties.Resources.Picture11;
+            Pic11Dup.Image = Properties.Resources.Picture11;
+            Pic12.Image = Properties.Resources.Picture12;
+            Pic12Dup.Image = Properties.Resources.Picture12;
 
             //foreach (PictureBox pic in panel1.Controls)
             //{
@@ -131,7 +131,7 @@ namespace GameMemory
             {
                 pic.Enabled = true;
                 pic.Cursor = Cursors.Hand;
-                pic.Image = Properties.Resources.Card1;
+                pic.Image = Properties.Resources.CoverPicture;
             }
         }
 
@@ -148,9 +148,9 @@ namespace GameMemory
         {
 
             var pic = (PictureBox)sender;
-            string s = pic.Tag.ToString()+".jpg";
+            string s = pic.Tag.ToString()+".png";
             
-            string path = "C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/GameMemory/Resources/Card" + s;
+            string path = "C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/GameMemory/Resources/Picture" + s;
             pic.Image = Image.FromFile(path);
 
             //Pic1.Image = Properties.Resources.Card1;
@@ -541,8 +541,8 @@ namespace GameMemory
         private void timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
-            PendingImage1.Image = Properties.Resources.MdzRlewvieo1;
-            PendingImage2.Image = Properties.Resources.MdzRlewvieo1;
+            PendingImage1.Image = Properties.Resources.CoverPicture;
+            PendingImage2.Image = Properties.Resources.CoverPicture;
             PendingImage1 = null;
             PendingImage2 = null;
 
