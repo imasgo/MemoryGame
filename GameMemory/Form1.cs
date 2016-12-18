@@ -105,6 +105,19 @@ namespace GameMemory
             Pic5Dup.Image = Properties.Resources.Card5;
             Pic6.Image = Properties.Resources.Card6;
             Pic6Dup.Image = Properties.Resources.Card6;
+            Pic7.Image = Properties.Resources.Card6;
+            Pic7Dup.Image = Properties.Resources.Card6;
+            Pic8.Image = Properties.Resources.Card6;
+            Pic8Dup.Image = Properties.Resources.Card6;
+            Pic9.Image = Properties.Resources.Card6;
+            Pic9Dup.Image = Properties.Resources.Card6;
+            Pic10.Image = Properties.Resources.Card6;
+            Pic10Dup.Image = Properties.Resources.Card6;
+            Pic11.Image = Properties.Resources.Card6;
+            Pic11Dup.Image = Properties.Resources.Card6;
+            Pic12.Image = Properties.Resources.Card6;
+            Pic12Dup.Image = Properties.Resources.Card6;
+
             //foreach (PictureBox pic in panel1.Controls)
             //{
             //    pic.Image = Properties.Resources.MdzRlewvieo1;
@@ -118,7 +131,7 @@ namespace GameMemory
             {
                 pic.Enabled = true;
                 pic.Cursor = Cursors.Hand;
-                pic.Image = Properties.Resources.MdzRlewvieo1;
+                pic.Image = Properties.Resources.Card1;
             }
         }
 
@@ -137,7 +150,7 @@ namespace GameMemory
             var pic = (PictureBox)sender;
             string s = pic.Tag.ToString()+".jpg";
             
-            string path = "C:/Users/Dima/Source/Repos/MemoryGame/GameMemory/Resources/Card" + s;
+            string path = "C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/GameMemory/Resources/Card" + s;
             pic.Image = Image.FromFile(path);
 
             //Pic1.Image = Properties.Resources.Card1;
@@ -563,7 +576,7 @@ namespace GameMemory
             //timeleft--;
             //label3.Text = timeleft.ToString();
             score = Convert.ToInt32(ScoreCount.Text);
-            if((score == 60)||(timeleft==0))
+            if((score == 120)||(timeleft==0))
             {
                 TimeLimit.Stop();
                 if (timeleft == 0)
@@ -579,7 +592,7 @@ namespace GameMemory
                     lform.Show();
                     lform.Username_Load(sender,e);
                     using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
+            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                     {
                         int gametime = 30 - timeleft;
                                 file.Write(gametime.ToString()+",");

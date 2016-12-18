@@ -117,38 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Card5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAM1XyW4jNxC9B8g/NHhKAI/o5ZIYrRk4kj0QYtmG2zN3qrskE+HSIdmG9G055JPyCyn2vkjWkmAw0IVNVr2qeqyF+uevv8NPaymCNzCWazUmF6NzEoCKdcLVakwyt/zwC/n08ccfwttEroOvldyVl0NNZcfk1bn0mlIbv4JkdiR5bLTVSzeKtaQs0fTy/PxXenFBASEIYgVB+JwpxyXkH/g50SqG1GVMzHUCwpb7eBLlqMEDk2BTFsOYfMblHKQ2GxLcCM7QgwjEkgRMKe2YQ/+uv1iInNFqFaW4wcTLJgWUWzJhofT7uhE/NITzSx8CbRQrqDizTssjAS+uSk5oX/0kZknNGbJ2i+y6jY86Z25M7oElYBaamWQimLUk6Bu9ngjjFdoEj/pqZ0FzeFZnAyaN/50Fk0y4zMBYQeYME2fBU7YQPP4dNi/6D1BjlQnR9hM9xbPOBm49GZ2CcZtnWJbez6YkoF092les1Vo6RTwz5a4uSfCAxtlCQJ0Grdgjpw18BgWGOUiemHNg8BZnCeREDqz3bHlSzDNCqdU+owcA+WUFg1mcg87Z+h7Uyr2OCS5JcMfXkFQ7JfQXxbFuUcmZ7DBLL1we6XJIm9QaJhyWsWMcWSyN+G9Yuy3JhgVa5pst/e16W+BF4Dr5i2nbmC/KfpCi2/2tPWs6Cy1aS9WC6I4eFM5ZmiJLrZ5U7gRR0ZAmH6LjK1YWGDS2Wwq39ra2hPnJVtA79QQncMeNdVPm2IL525okcotYcQ87OK6sdKnul2XDfCXv10027WgZfZyGvzsMSWKB5dFB7c2WZjWAyAcDE8xsKfqJFplUuxrHe9qdMm7DdA6OxCuqeYBWbB+JVdXrAK06GOKFtMd2/1rp4F57jbafJu9VV1+ktl5XWa+awjKz94/9QaoXIiRAot544tM82lgHcuQFRtGfYiI4xtsIzJniS7CumEUEJ/Bl7wXx/Uxzam0ijhzp33ywcs/u3tF5ygjsztLczn+dpOqNmfiVmZ8kW//chjtxWu536thZ2W/lh0zE9tw7YDQWNTMmyUJjHIXnfSk4fYQOizmk7Zd+OAXLVw2Ef/criH2VNKCVzEwtdXUNGHbbo0qkd0tzcCxB9m6M40sWOzyOwdr80r4ykaHIrVxAMlOPmUszd4PByoXoPO9C+r79/J3Q9Tl8TP2X/T9CQDc5hgCP6reMi6T2+25Leu2A8IlU1iN6hQ9IhFttaqQHrQ4EKumbQgrKV/MLyFQgmH1UEXuDU3zDZ989rFi8qXrybpD9F9GlPZxytjJM2hKj0ff/Xqn/+/rxX7oCWkHwDgAA</value>
   </data>
-  <data name="Card111" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BlankPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlankPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MdzRlewvieo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MdzRlewvieo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>
