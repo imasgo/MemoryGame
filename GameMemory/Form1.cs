@@ -15,7 +15,7 @@ namespace GameMemory
         //Variables
         int score = 0;//score
         MenuForm mf = new MenuForm();
-        bool again = false;//Do you want to play again
+        //bool again = false;//Do you want to play again
         Random Location = new Random();//Chooses random places for each new card
         //List<int> X = new List<int>();//list of x coordinates
         //List<int> Y = new List<int>();//list of y coordinates
