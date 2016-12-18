@@ -26,7 +26,10 @@ namespace GameMemory
         int timercount;
         //int timeleft=60;
         PictureBox PendingImage1;
+
         PictureBox PendingImage2;
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -45,6 +48,7 @@ namespace GameMemory
 
             ScoreCount.Text = "0";
 
+            //randomize
             foreach (PictureBox pic in panel1.Controls)
             {
                 pic.Enabled = false;
@@ -62,6 +66,8 @@ namespace GameMemory
             TimeLimit.Start();
             timer2.Start();
             timer1.Start();
+
+            //list of 
             Pic1.Image = Properties.Resources.Card1;
             Pic1Dup.Image = Properties.Resources.Card1;
             Pic2.Image = Properties.Resources.Card2;
@@ -97,6 +103,44 @@ namespace GameMemory
             timer = timer-1;
             label1.Text = Convert.ToString(timer);
             if (timer == 0) { timer2.Stop(); }
+        }
+
+        //!!!
+        private void PicClick(object sender, EventArgs e)
+        {
+
+            var pic = (PictureBox)sender;
+            string s = pic.Tag.ToString()+".jpg";
+            
+            string path = "C:/Users/Dima/Source/Repos/MemoryGame/GameMemory/Resources/Card" + s;
+            pic.Image = Image.FromFile(path);
+
+            //Pic1.Image = Properties.Resources.Card1;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pic;
+            }
+            else if ((PendingImage1 != null) && (PendingImage2 == null))
+            {
+                PendingImage2 = pic;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                    pic.Enabled = false;
+                    //Pic1.Enabled=false;
+                    //Pic1Dup.Enabled = false;
+                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
+                    score = score + 10;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         #region Cards Swap
