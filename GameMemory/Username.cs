@@ -29,13 +29,13 @@ namespace GameMemory
                 file.WriteLine(textBox1.Text);
 
             }
-            using (System.IO.StreamWriter file =
-           new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
-            {
+           // using (System.IO.StreamWriter file =
+           //new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
+           // {
 
-                file.WriteLine(textBox1.Text);
+           //     file.WriteLine(textBox1.Text);
 
-            }
+           // }
             //надо подумать как заменить на load мб
         }
 
