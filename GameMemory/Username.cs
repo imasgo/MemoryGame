@@ -21,13 +21,22 @@ namespace GameMemory
         {
             MenuForm lform = new MenuForm();
             this.Hide();
-            lform.Show(); //надо подумать как заменить на load мб
+            lform.Show();
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt",true))
+            {
+                
+                file.WriteLine(textBox1.Text);
+
+            }
+            //надо подумать как заменить на load мб
         }
 
 
         public void Username_Load(object sender, EventArgs e)
         {
             textBox1.Text = "";
+
             label3.Text = "";
         }
     }

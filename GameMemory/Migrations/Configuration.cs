@@ -26,10 +26,20 @@ namespace GameMemory.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
+            // 
+            string line;
+            
+            System.IO.StreamReader file =
+               new System.IO.StreamReader(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", System.Text.Encoding.Default);
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] newline = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass { GamerName = newline[1], GamerRating = int.Parse(newline[0]), GamerScore = "1" });
+
+            }
+            file.Close();
 
 
-            context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass {  GamerName = "Gamer", GamerRating = 1, GamerScore="200"} );
         }
     }
 }

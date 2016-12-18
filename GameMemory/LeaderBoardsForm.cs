@@ -21,6 +21,10 @@ namespace GameMemory
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "leaderboardDataSet.LeaderboardClasses". При необходимости она может быть перемещена или удалена.
             this.leaderboardClassesTableAdapter.Fill(this.leaderboardDataSet.LeaderboardClasses);
+            this.leaderboardDataSet.AcceptChanges();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+
 
         }
 
@@ -33,6 +37,11 @@ namespace GameMemory
         {
             this.Close();
 
+        }
+
+        private void leaderboardClassesBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            this.leaderboardClassesTableAdapter.Update(this.leaderboardDataSet);
         }
     }
 }
