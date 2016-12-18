@@ -514,6 +514,8 @@ namespace GameMemory
                                 file.Write(gametime.ToString()+",");
                             
                     }
+                    int gametime1 = 30 - timeleft;
+                    System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
 
                 }
                 
