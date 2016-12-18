@@ -18,9 +18,7 @@ namespace GameMemory
 
         public static void StartGame()
         {
-            //для этого варика надо выносить меню в отдельные проект но можно и так
-            //Process.Start("GameMemory.exe");
-            //lform.Form1_Load(sender,e);
+ 
             
         }
 

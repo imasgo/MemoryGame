@@ -14,7 +14,7 @@ namespace GameMemory
     public partial class Form1 : Form
     {
         //Variables
-        int score = 0;
+        
 
         //For going back to menu
 
@@ -264,20 +264,20 @@ namespace GameMemory
                 }
                 else
                 {
-                    //timerset = int.Parse(label3.Text);
+                    //writing to db and going to username
                     this.Hide();
                     lform.Show();
                     lform.Username_Load(sender,e);
+
                     using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                     {
 
                         int gametime = tmrst - timeleft;
-                                file.Write(gametime.ToString()+",");
+                        file.Write(gametime.ToString()+",");
                             
                     }
-                    //int gametime1 = 30 - timeleft;
-                   // System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
+                   
 
                 }
                 

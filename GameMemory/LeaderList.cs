@@ -41,7 +41,7 @@ namespace GameMemory
                 string[] newline = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 LeadersDynamic.Add(new Leader { Name = newline[1], Time = int.Parse(newline[0]) });
 
-                //context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass { GamerName = newline[1], GamerRating = int.Parse(newline[0]), GamerScore = "1" });
+                
             }
             file.Close();
             var orderedlist = LeadersDynamic.OrderBy(x => x.Time);
@@ -52,7 +52,7 @@ namespace GameMemory
             }
 
 
-           // listBox1.Refresh();
+          
         }
     }
 }
