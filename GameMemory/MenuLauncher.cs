@@ -12,7 +12,7 @@ namespace GameMemory
     {
         static Form1 lform = new Form1();
         
-        static LeaderBoardsForm lform2= new LeaderBoardsForm();
+        static LeaderList lform2= new LeaderList();
 
         //static MenuForm lform2 = new MenuForm();  
 
@@ -26,7 +26,7 @@ namespace GameMemory
 
         public static void LeaderBoard()
         {
-            lform2.Activate();
+            //lform2.Activate();
             lform2.Show();
         }
         public static void ExitG()

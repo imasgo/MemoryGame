@@ -18,7 +18,8 @@ namespace GameMemory
         }
 
         static Form1 lform = new Form1();
-        static LeaderBoardsForm lform1 = new LeaderBoardsForm();
+        //static LeaderBoardsForm lform1 = new LeaderBoardsForm();
+        static LeaderList lform1 = new LeaderList();
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
@@ -34,10 +35,11 @@ namespace GameMemory
 
         private void BoardButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            lform1.Show();
+            lform1.LeaderList_Load(sender,e);
             //this.Hide();
-            //lform1.Show();
-            //lform1.LeaderBoardsForm_Load(sender,e);
-            MenuLauncher.LeaderBoard();
+            //MenuLauncher.LeaderBoard();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace GameMemory
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             Application.Exit();
         }
     }
