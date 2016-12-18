@@ -576,7 +576,7 @@ namespace GameMemory
             //timeleft--;
             //label3.Text = timeleft.ToString();
             score = Convert.ToInt32(ScoreCount.Text);
-            if((score == 60)||(timeleft==0))
+            if((score == 120)||(timeleft==0))
             {
                 TimeLimit.Stop();
                 if (timeleft == 0)
