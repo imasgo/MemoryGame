@@ -12,5 +12,6 @@ namespace GameMemory
         public int  GamerRating { get; set; }
         public string GamerName { get; set; }
         public string GamerScore { get; set; }
+       
     }
 }

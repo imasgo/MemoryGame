@@ -17,7 +17,7 @@ namespace GameMemory
 
         int tmrst;
         int score = 0;//score
-        int score = 0;
+        
 
         //For going back to menu
         MenuForm mf = new MenuForm();
