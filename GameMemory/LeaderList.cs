@@ -28,7 +28,31 @@ namespace GameMemory
 
         public void LeaderList_Load(object sender, EventArgs e)
         {
-           listBox1.Refresh();
+            string line;
+            List<Leader> LeadersDynamic = new List<Leader>();
+
+
+            System.IO.StreamReader file =
+               new System.IO.StreamReader(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", System.Text.Encoding.Default);
+
+            while ((line = file.ReadLine()) != null)
+            {
+
+                string[] newline = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                LeadersDynamic.Add(new Leader { Name = newline[1], Time = int.Parse(newline[0]) });
+
+                //context.Leaders.AddOrUpdate(c => c.GamerName, new LeaderboardClass { GamerName = newline[1], GamerRating = int.Parse(newline[0]), GamerScore = "1" });
+            }
+            file.Close();
+            var orderedlist = LeadersDynamic.OrderBy(x => x.Time);
+            foreach (var item in orderedlist)
+            {
+                string str = "Name: " + item.Name + "Time:" + item.Time;
+                listBox1.Items.Add(str);
+            }
+
+
+           // listBox1.Refresh();
         }
     }
 }
