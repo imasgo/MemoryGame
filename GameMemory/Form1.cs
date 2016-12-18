@@ -15,21 +15,21 @@ namespace GameMemory
     {
         //Variables
 
-        int tmrst;
-        int score = 0;//score
-        
 
         //For going back to menu
+
+        int tmrst;
+        int score = 0;//score
         MenuForm mf = new MenuForm();
 
         //Random choice of location
         Random Location = new Random();//Chooses random places for each new card
+        
+        //Location list
         //List<int> X = new List<int>();//list of x coordinates
         //List<int> Y = new List<int>();//list of y coordinates
         int timerset;
 
-        
-        //Location list
         List<Point> Points = new List<Point>();
 
 
@@ -264,10 +264,11 @@ namespace GameMemory
                 }
                 else
                 {
-                    //timerset = int.Parse(label3.Text);
+                    //writing to db and going to username
                     this.Hide();
                     lform.Show();
                     lform.Username_Load(sender,e);
+
                     using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                     {
@@ -276,8 +277,7 @@ namespace GameMemory
                                 file.Write(gametime.ToString()+",");
                             
                     }
-                    //int gametime1 = 30 - timeleft;
-                   // System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
+                   
 
                 }
                 
