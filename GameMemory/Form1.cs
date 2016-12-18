@@ -159,7 +159,7 @@ namespace GameMemory
             {
                 timer2.Stop();
                 TimeLimit.Start();
-            }
+        }
         }
 
         //One method for clicking picture boxes
@@ -173,7 +173,7 @@ namespace GameMemory
             
             string path = "C:/Users/Dima/Source/Repos/MemoryGame/GameMemory/Resources/Picture" + s;
             pic.Image = Image.FromFile(path);
-            
+
 
             if (PendingImage1 == null)
             {
@@ -203,9 +203,9 @@ namespace GameMemory
             }
         }
 
-        
 
-        
+
+
         //timer 3 for 40,60,90 seconds
         private void timer3_Tick(object sender, EventArgs e)
         {

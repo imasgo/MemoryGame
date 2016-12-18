@@ -35,7 +35,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 152);
+            this.textBox1.Location = new System.Drawing.Point(641, 211);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(264, 26);
             this.textBox1.TabIndex = 0;
@@ -43,7 +43,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(212, 207);
+            this.button1.Location = new System.Drawing.Point(641, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(264, 69);
             this.button1.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(227, 97);
+            this.label1.Location = new System.Drawing.Point(654, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 34);
             this.label1.TabIndex = 2;
@@ -66,11 +66,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(776, 463);
+            this.ClientSize = new System.Drawing.Size(1298, 544);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Username";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Username";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Username_FormClosing);
             this.Load += new System.EventHandler(this.Username_Load);

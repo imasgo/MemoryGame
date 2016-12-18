@@ -35,7 +35,7 @@
             // 
             // PlayButton
             // 
-            this.PlayButton.Location = new System.Drawing.Point(405, 149);
+            this.PlayButton.Location = new System.Drawing.Point(593, 83);
             this.PlayButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(208, 92);
@@ -46,7 +46,7 @@
             // 
             // BoardButton
             // 
-            this.BoardButton.Location = new System.Drawing.Point(405, 280);
+            this.BoardButton.Location = new System.Drawing.Point(593, 238);
             this.BoardButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BoardButton.Name = "BoardButton";
             this.BoardButton.Size = new System.Drawing.Size(208, 92);
@@ -57,7 +57,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(405, 403);
+            this.ExitButton.Location = new System.Drawing.Point(593, 382);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(208, 92);
@@ -71,12 +71,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(1048, 637);
+            this.ClientSize = new System.Drawing.Size(1298, 544);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.BoardButton);
             this.Controls.Add(this.PlayButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuForm_FormClosing);
             this.ResumeLayout(false);
