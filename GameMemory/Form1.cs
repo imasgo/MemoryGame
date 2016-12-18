@@ -576,9 +576,7 @@ namespace GameMemory
             Username lform = new Username();
             MenuForm lform1 = new MenuForm();
 
-            //timercount++;
-            //timeleft--;
-            //label3.Text = timeleft.ToString();
+           
             score = Convert.ToInt32(ScoreCount.Text);
             if((score == 120)||(timeleft==0))
             {
