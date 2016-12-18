@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,27 +14,31 @@ namespace GameMemory
     public partial class Form1 : Form
     {
         //Variables
-        int score = 0;//score
-        MenuForm mf = new MenuForm();
-        //bool again = false;//Do you want to play again
-        Random Location = new Random();//Chooses random places for each new card
-        //List<int> X = new List<int>();//list of x coordinates
-        //List<int> Y = new List<int>();//list of y coordinates
+        int score = 0;
 
+        //For going back to menu
+        MenuForm mf = new MenuForm();
+
+        //Random choice of location
+        Random Location = new Random();//Chooses random places for each new card
+        
+        //Location list
         List<Point> Points = new List<Point>();
+
 
         List<int> check = new List<int>();
         int timercount;
-        //int timeleft=60;
+        
+        //for checking does they match
         PictureBox PendingImage1;
 
         PictureBox PendingImage2;
 
-        HardLevel hrd;
 
         public Form1(string str)
         {
             InitializeComponent();
+            //for difficulty level
             label4.Text = str;
         }
            
@@ -41,7 +46,7 @@ namespace GameMemory
        
 
     
-        // i like u
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -49,7 +54,10 @@ namespace GameMemory
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            //5 seconds to remember
             label1.Text = "5";
+
+            //Getting difficulty level
             string str = label4.Text;
 
             switch (str)
@@ -66,11 +74,8 @@ namespace GameMemory
 
 
             }
-            //if (label4.Text == "Medium")
-            //{
-            //    label3.Text = "40"; //заменить переменной
-            //}
 
+            //Updating score
             ScoreCount.Text = "0";
 
             //randomize
@@ -88,11 +93,11 @@ namespace GameMemory
                 Points.Remove(pnt);
             }
 
-            TimeLimit.Start();
+            //timers, for 5 seconds
             timer2.Start();
             timer1.Start();
 
-            //list of 
+            //Upoading pictures to objects for first five seconds
             Pic1.Image = Properties.Resources.Picture1;
             Pic1Dup.Image = Properties.Resources.Picture1;
             Pic2.Image = Properties.Resources.Picture2;
@@ -118,12 +123,9 @@ namespace GameMemory
             Pic12.Image = Properties.Resources.Picture12;
             Pic12Dup.Image = Properties.Resources.Picture12;
 
-            //foreach (PictureBox pic in panel1.Controls)
-            //{
-            //    pic.Image = Properties.Resources.MdzRlewvieo1;
-            //}
         }
 
+        //event for ticking
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -135,25 +137,32 @@ namespace GameMemory
             }
         }
 
+        //another event for ticking
         private void timer2_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(label1.Text);
             timer = timer-1;
             label1.Text = Convert.ToString(timer);
-            if (timer == 0) { timer2.Stop(); }
+            if (timer == 0)
+            {
+                timer2.Stop();
+                TimeLimit.Start();
+            }
         }
 
-        //!!!
+        //One method for clicking picture boxes
         private void PicClick(object sender, EventArgs e)
         {
 
             var pic = (PictureBox)sender;
             string s = pic.Tag.ToString()+".png";
             
-            string path = "C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/GameMemory/Resources/Picture" + s;
-            pic.Image = Image.FromFile(path);
 
-            //Pic1.Image = Properties.Resources.Card1;
+            
+            string path = "C:/Users/Dima/Source/Repos/MemoryGame/GameMemory/Resources/Picture" + s;
+            pic.Image = Image.FromFile(path);
+            
+
             if (PendingImage1 == null)
             {
                 PendingImage1 = pic;
@@ -171,8 +180,7 @@ namespace GameMemory
                     PendingImage2 = null;
 
                     pic.Enabled = false;
-                    //Pic1.Enabled=false;
-                    //Pic1Dup.Enabled = false;
+
                     ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
                     score = score + 10;
                 }
@@ -183,361 +191,10 @@ namespace GameMemory
             }
         }
 
-        #region Cards Swap
-        private void Pic1_Click(object sender, EventArgs e)
-        {
-            Pic1.Image = Properties.Resources.Card1;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic1;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic1;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic1.Enabled = false;
-                    Pic1Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
         
 
-        }
-
-        private void Pic1Dup_Click(object sender, EventArgs e)
-        {
-            Pic1Dup.Image = Properties.Resources.Card1;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic1Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic1Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic1.Enabled = false;
-                    Pic1Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic2_Click(object sender, EventArgs e)
-        {
-            Pic2.Image = Properties.Resources.Card2;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic2;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic2;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic2.Enabled = false;
-                    Pic2Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic2Dup_Click(object sender, EventArgs e)
-        {
-            Pic2Dup.Image = Properties.Resources.Card2;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic2Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic2Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic2.Enabled = false;
-                    Pic2Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text)+10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic3_Click(object sender, EventArgs e)
-        {
-            Pic3.Image = Properties.Resources.Card3;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic3;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic3;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic3.Enabled = false;
-                    Pic3Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic3Dup_Click(object sender, EventArgs e)
-        {
-            Pic3Dup.Image = Properties.Resources.Card3;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic3Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic3Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic3.Enabled = false;
-                    Pic3Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic4_Click(object sender, EventArgs e)
-        {
-            Pic4.Image = Properties.Resources.Card4;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic4;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic4;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic4.Enabled = false;
-                    Pic4Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic4Dup_Click(object sender, EventArgs e)
-        {
-            Pic4Dup.Image = Properties.Resources.Card4;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic4Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic4Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic4.Enabled = false;
-                    Pic4Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic5_Click(object sender, EventArgs e)
-        {
-            Pic5.Image = Properties.Resources.Card5;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic5;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic5;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic5.Enabled = false;
-                    Pic5Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic5Dup_Click(object sender, EventArgs e)
-        {
-            Pic5Dup.Image = Properties.Resources.Card5;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic5Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic5Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic5.Enabled = false;
-                    Pic5Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic6_Click(object sender, EventArgs e)
-        {
-            Pic6.Image = Properties.Resources.Card6;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic6;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic6;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic6.Enabled = false;
-                    Pic6Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Pic6Dup_Click(object sender, EventArgs e)
-        {
-            Pic6Dup.Image = Properties.Resources.Card6;
-            if (PendingImage1 == null)
-            {
-                PendingImage1 = Pic6Dup;
-            }
-            else if ((PendingImage1 != null) && (PendingImage2 == null))
-            {
-                PendingImage2 = Pic6Dup;
-            }
-            if (PendingImage1 != null && PendingImage2 != null)
-            {
-                if (PendingImage1.Tag == PendingImage2.Tag)
-                {
-                    PendingImage1 = null;
-                    PendingImage2 = null;
-                    Pic6.Enabled = false;
-                    Pic6Dup.Enabled = false;
-                    ScoreCount.Text = Convert.ToString(Convert.ToInt32(ScoreCount.Text) + 10);
-                    score = score + 10;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-        #endregion
-
-        //В int score содержится финальное количество очков!
-
+        
+        //timer 3 for 40,60,90 seconds
         private void timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
@@ -548,6 +205,8 @@ namespace GameMemory
 
         }
 
+
+        //getting back to menu
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             
@@ -556,6 +215,7 @@ namespace GameMemory
             mf.Show();   
         }
 
+        //another way to getting back 
         private void buttonback_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -563,25 +223,29 @@ namespace GameMemory
             mf.Show();
         }
 
+
+        //
         private void TimeLimit_Tick(object sender, EventArgs e)
         {
+            //label --
             int timeleft = Convert.ToInt32(label3.Text);
             timeleft = timeleft - 1;
             label3.Text = Convert.ToString(timeleft);
 
+            //for entering your name and getting back to meno
             Username lform = new Username();
             MenuForm lform1 = new MenuForm();
 
-            //timercount++;
-            //timeleft--;
-            //label3.Text = timeleft.ToString();
+            //getting score
             score = Convert.ToInt32(ScoreCount.Text);
+
+            //ending
             if((score == 120)||(timeleft==0))
             {
                 TimeLimit.Stop();
                 if (timeleft == 0)
                 {
-                    //MessageBox.Show("I am poppy");
+                    MessageBox.Show("You lose!");
                     this.Hide();
                     lform1.Show();
                    
@@ -603,7 +267,6 @@ namespace GameMemory
 
                 }
                 
-                //передача в бд
                 
             }
 
