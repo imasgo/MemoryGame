@@ -27,7 +27,7 @@ namespace GameMemory
                 lform.Show();
                 //writing name to file
                 using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
+                new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
                 {
 
                     file.WriteLine(textBox1.Text);
@@ -47,7 +47,7 @@ namespace GameMemory
         {
             textBox1.Text = "";
 
-            label3.Text = "";
+           
         }
 
         //closing and going back to menu
