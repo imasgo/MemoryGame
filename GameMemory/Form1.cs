@@ -552,14 +552,14 @@ namespace GameMemory
                     lform.Show();
                     lform.Username_Load(sender,e);
                     using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt",true))
+            new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
                     {
                         int gametime = 30 - timeleft;
                                 file.Write(gametime.ToString()+",");
                             
                     }
                     int gametime1 = 30 - timeleft;
-                    System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
+                   // System.IO.File.WriteAllText(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbString.txt", gametime1.ToString() + ",");
 
                 }
                 

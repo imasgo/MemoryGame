@@ -23,19 +23,19 @@ namespace GameMemory
             this.Hide();
             lform.Show();
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", true))
+            new System.IO.StreamWriter(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", true))
             {
 
                 file.WriteLine(textBox1.Text);
 
             }
-            using (System.IO.StreamWriter file =
-           new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
-            {
+           // using (System.IO.StreamWriter file =
+           //new System.IO.StreamWriter(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/Dbstring.txt", true))
+           // {
 
-                file.WriteLine(textBox1.Text);
+           //     file.WriteLine(textBox1.Text);
 
-            }
+           // }
             //надо подумать как заменить на load мб
         }
 

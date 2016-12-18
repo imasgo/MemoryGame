@@ -33,7 +33,7 @@ namespace GameMemory
 
 
             System.IO.StreamReader file =
-               new System.IO.StreamReader(@"C:/Users/Мария/Documents/Visual Studio 2015/Projects/GameMemory/DbDataGame.txt", System.Text.Encoding.Default);
+               new System.IO.StreamReader(@"C:/Users/Dima/Source/Repos/MemoryGame/DbDataGame.txt", System.Text.Encoding.Default);
 
             while ((line = file.ReadLine()) != null)
             {
